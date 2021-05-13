@@ -24,4 +24,11 @@ router.post("/api/new-post", apiPortfolioController.newBlogPost);
 router.patch("/api/post/:id", apiPortfolioController.editBlogPost);
 router.delete("/api/post/:id", apiPortfolioController.deleteBlogPost);
 
+/*CONTACT*/
+router.get("/api/messages", apiPortfolioController.allMessages);
+router.get("/api/messages/:id", apiPortfolioController.oneMessage);
+router.post("/api/new-message", apiPortfolioController.newMessage);
+router.patch("/api/messages/:id", apiPortfolioController.readMessage);
+router.delete("/api/messages/:id", apiPortfolioController.deleteMessage);
+
 module.exports = router;
