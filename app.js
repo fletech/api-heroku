@@ -38,7 +38,7 @@ app.use(cors());
 
 // ROUTES
 app.use("/", indexRouter);
-app.use("/image_uploader", apiImageUploaderRouter);
+app.use("/image-uploader", apiImageUploaderRouter);
 app.use("/facundo", apiPortfolioRouter);
 
 // catch 404 and forward to error handler
