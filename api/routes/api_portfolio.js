@@ -31,4 +31,7 @@ router.post("/api/new-message", apiPortfolioController.newMessage);
 router.patch("/api/messages/:id", apiPortfolioController.readMessage);
 router.delete("/api/messages/:id", apiPortfolioController.deleteMessage);
 
+/*USERS*/
+
+router.post("/api/users", apiPortfolioController.loginAlkemy);
 module.exports = router;

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Post = require("../database/portfolio/models/post");
 const Message = require("../database/portfolio/models/message");
+const User = require("../database/portfolio/models/user");
 
 module.exports = {
   //BLOG
@@ -78,4 +79,35 @@ module.exports = {
   },
   readMessage: (req, res) => {},
   deleteMessage: (req, res) => {},
+  //LOGIN ALKEMY
+  loginAlkemy: (req, res) => {
+    if (
+      req.body.email === "challenge@alkemy.org" &&
+      req.body.password === "react"
+    ) {
+      res.status(200).json({
+        token:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiZW1haWwiOiJjaGFsbGVuZ2VAYWxrZW15Lm9yZyIsImlhdCI6MTUxNjIzOTAyMn0.ilhFPrG0y7olRHifbjvcMOlH7q2YwlegT0f4aSbryBE",
+      });
+    } else {
+      res.status(400).json({ error: "not allowed" });
+    }
+
+    // const message = new Message({
+    //   _id: new mongoose.Types.ObjectId(),
+    //   email: req.body.email,
+    //   password: req.body.password
+    // });
+
+    // message
+    //   .save()
+    //   .then((result) => {
+    //     console.log(result);
+    //     res.status(200).json(result);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     res.status(500).json(err);
+    //   });
+  },
 };
