@@ -82,8 +82,8 @@ module.exports = {
   //LOGIN ALKEMY
   loginAlkemy: (req, res) => {
     if (
-      req.body.email === "challenge@alkemy.org" &&
-      req.body.password === "react"
+      req.body.email === "challenge@superhero.com" &&
+      req.body.password === "react&&challenge"
     ) {
       res.status(200).json({
         token:
@@ -92,22 +92,5 @@ module.exports = {
     } else {
       res.status(400).json({ error: "not allowed" });
     }
-
-    // const message = new Message({
-    //   _id: new mongoose.Types.ObjectId(),
-    //   email: req.body.email,
-    //   password: req.body.password
-    // });
-
-    // message
-    //   .save()
-    //   .then((result) => {
-    //     console.log(result);
-    //     res.status(200).json(result);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     res.status(500).json(err);
-    //   });
   },
 };
