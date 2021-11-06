@@ -18,18 +18,18 @@ let apiPortfolioController = require("../controllers/api_portfolioController");
 // var upload = multer({ storage: storage });
 
 /* BLOG */
-router.get("/api/posts", apiPortfolioController.allBlogPosts);
-router.get("/api/post/:id", apiPortfolioController.oneBlogPosts);
-router.post("/api/new-post", apiPortfolioController.newBlogPost);
-router.patch("/api/post/:id", apiPortfolioController.editBlogPost);
-router.delete("/api/post/:id", apiPortfolioController.deleteBlogPost);
+router.get("/posts", apiPortfolioController.allBlogPosts);
+router.get("/post/:id", apiPortfolioController.oneBlogPosts);
+router.post("/new-post", apiPortfolioController.newBlogPost);
+router.patch("/post/:id", apiPortfolioController.editBlogPost);
+router.delete("/post/:id", apiPortfolioController.deleteBlogPost);
 
 /*CONTACT*/
-router.get("/api/messages", apiPortfolioController.allMessages);
-router.get("/api/messages/:id", apiPortfolioController.oneMessage);
-router.post("/api/new-message", apiPortfolioController.newMessage);
-router.patch("/api/messages/:id", apiPortfolioController.readMessage);
-router.delete("/api/messages/:id", apiPortfolioController.deleteMessage);
+router.get("/messages", apiPortfolioController.allMessages);
+router.get("/messages/:id", apiPortfolioController.oneMessage);
+router.post("/new-message", apiPortfolioController.newMessage);
+router.patch("/messages/:id", apiPortfolioController.readMessage);
+router.delete("/messages/:id", apiPortfolioController.deleteMessage);
 
 /*USERS*/
 
