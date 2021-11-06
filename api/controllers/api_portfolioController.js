@@ -78,7 +78,13 @@ module.exports = {
       });
   },
   readMessage: (req, res) => {},
-  deleteMessage: (req, res) => {},
+  deleteMessage: (req, res) => {
+    const _id = req.params.id;
+    Message.findByIdAndRemove(_id)
+      .exec()
+      .then((doc) => res.status(204).json(doc))
+      .catch((err) => res.status(500).json({ error: err }));
+  },
   //LOGIN ALKEMY
   loginAlkemy: (req, res) => {
     if (
