@@ -1,0 +1,14 @@
+body {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  visited: tomato;
+  clicked: tomato;
+  color: orange;
+}
